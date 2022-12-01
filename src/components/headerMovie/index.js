@@ -6,6 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import HomeIcon from "@mui/icons-material/Home";
 import { useNavigate } from "react-router-dom";
+import HelpIcon from '@mui/icons-material/Help';
 
 const MovieHeader = (props) => {
   const movie = props.movie;
@@ -30,6 +31,9 @@ const MovieHeader = (props) => {
         {movie.title}
         <a href={movie.homepage}>
           <HomeIcon color="primary" />
+        </a>
+        <a href={`https://www.boxofficemojo.com/title/${movie.imdb_id}`}>
+        <HelpIcon color="primary" />
         </a>
         <br />
         <span sx={{ fontSize: "1.5rem" }}>{`   "${movie.tagline}"`} </span>
