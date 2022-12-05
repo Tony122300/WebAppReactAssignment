@@ -7,6 +7,9 @@ import Typography from "@mui/material/Typography";
 import HomeIcon from "@mui/icons-material/Home";
 import { useNavigate } from "react-router-dom";
 import HelpIcon from '@mui/icons-material/Help';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const MovieHeader = (props) => {
   const movie = props.movie;
@@ -34,6 +37,15 @@ const MovieHeader = (props) => {
         </a>
         <a href={`https://www.boxofficemojo.com/title/${movie.imdb_id}`}>
         <HelpIcon color="primary" />
+        </a>
+        <a href={`https://www.boxofficemojo.com/title/${movie.imdb_id}`}>
+        <FacebookIcon color="primary" />
+        </a>
+        <a href={`https://www.boxofficemojo.com/title/${movie.imdb_id}`}>
+        <TwitterIcon color="primary" />
+        </a>
+        <a href={`https://www.boxofficemojo.com/title/${movie.imdb_id}`}>
+        <InstagramIcon color="primary" />
         </a>
         <br />
         <span sx={{ fontSize: "1.5rem" }}>{`   "${movie.tagline}"`} </span>

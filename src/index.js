@@ -27,7 +27,7 @@ import TVSeriesPage from "./pages/tvSeriesPage";
 import TVSeriesDetailsPage from "./components/tvSeriesDetails";
 import TVSeriesContextProvider from "./contexts/tvSeriesContext";
 import { Switch } from "@mui/material";
-
+import movieDetailsPage from "./pages/movieDetailsPage";
 const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -54,6 +54,7 @@ const App = () => {
           <Route  exact path="/movies/favourites" element={<FavouriteMoviesPage />} />
           <Route exact path="/movies/upcoming" element={<UpcomingMoviesPage/>} />
           <Route exact path="/movies/popular" element={<PopularMovies/>} />
+          <Route exact path="/movies/socials" element={<movieDetailsPage/>} />
           <Route exact path="/movies/toprated" element={<TopMoviesPage/>} />
           <Route exact path="/actors" element={<MovieActorsPage/>}/>
           <Route  exact path="/actors/favourites" element={<FavouriteActorsPage />} />
