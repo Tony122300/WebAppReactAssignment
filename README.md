@@ -53,46 +53,46 @@ npm start
 e.g.
 
 Home Page
-![](./images/1.png)
+![1](https://user-images.githubusercontent.com/59939389/205658371-24d115db-bab2-49d3-8ce2-a64f385be6e9.png)
 
 Favourite Movies
-![ ](./images/2.png)
+![2](https://user-images.githubusercontent.com/59939389/205658424-67bceb8f-005c-41f8-874b-091b4954211b.png)
 
 Reviews
-![ ](./images/12.png)
+![image](https://user-images.githubusercontent.com/59939389/205658851-20ab93ea-c7f5-4009-b023-14feb8e6e0ca.png)
 
 
 Writing a review
-![ ](./images/3.png)
+![3](https://user-images.githubusercontent.com/59939389/205658456-cc08c040-bf65-49dd-b279-1401d786b59b.png)
 
 Movie Details
-![ ](./images/4.png)
+![4](https://user-images.githubusercontent.com/59939389/205658502-6cf31839-4325-4700-b893-5e2e29bb3b16.png)
 
 Upcoming Movies
-![ ](./images/5.png)
+![5](https://user-images.githubusercontent.com/59939389/205658527-0ff82fed-ec65-4850-b054-cb6a94d968da.png)
 
 Popular Movies
-![ ](./images/6.png)
+![6](https://user-images.githubusercontent.com/59939389/205658567-fa741d93-faa6-40a6-a1e7-4f168e4e7e0b.png)
 
 
 Top rated Movies
-![ ](./images/7.png)
+![7](https://user-images.githubusercontent.com/59939389/205658613-3e7f1c00-0735-492b-a679-9f41f531851b.png)
 
 Actors Page
-![ ](./images/12.png)
+![12](https://user-images.githubusercontent.com/59939389/205659151-82803976-0416-4c3b-90f8-f1f0dce751bf.png)
 
 
 Actors Details
-![ ](./images/8.png)
+![8](https://user-images.githubusercontent.com/59939389/205658663-8132ebb0-e7b6-4262-ac2b-c0845e4bbfc1.png)
 
 TV Series
-![ ](./images/9.png)
+![9](https://user-images.githubusercontent.com/59939389/205658707-2f5e8eb5-9fb1-430b-99d6-90e344b7c2fe.png)
 
 Signup Page
-![ ](./images/10.png)
+![10](https://user-images.githubusercontent.com/59939389/205658737-aaf6b637-b47d-4e71-bf6a-311c346164ab.png)
 
 Login Page
-![ ](./images/11.png)
+![11](https://user-images.githubusercontent.com/59939389/205658768-b92cb71b-7fb9-43a6-b72e-f71d8c9f22e6.png)
 
 >Shows the full review for a movie.
 
