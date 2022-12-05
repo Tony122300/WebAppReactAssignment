@@ -30,6 +30,7 @@ export default function MovieActorCard({ actors, action }) {
        e.preventDefault();
        addToFavourites(actors);
      };
+     
 // export default function MovieActorCard(props){
 //     const actors = props.actors;
   

@@ -17,7 +17,7 @@ const LoginPage = props => {
   //const { from } = props.location.state || { from: { pathname: "/" } }
  
  //const { from } ={ from: { pathname: "/" } }
-
+//second part doesnt work 
  const { from } = { from: { pathname: "/" } || props.location.state  }
   if (context.isAuthenticated === true) {
     //changed to navigate to match version 6.3

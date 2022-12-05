@@ -26,7 +26,7 @@ const TVSeriesHeader = (props) => {
       <IconButton aria-label="go back" onClick={() => navigate(-1)} >
         <ArrowBackIcon color="primary" fontSize="large" />
       </IconButton>
-
+{/* not fully finished tv series error if i dont comment this part */}
       <Typography variant="h4" component="h3">
         {/* {tvSeries.name}
         <a href={tvSeries.homepage}>

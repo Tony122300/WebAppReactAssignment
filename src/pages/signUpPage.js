@@ -15,8 +15,8 @@ const SignUpPage = props => {
         setRegistered(true);
       }
     }
-  
-    const { from } = props.location.state || { from: { pathname: "/" } };
+  //second part doesnt work 
+    const { from } = { from: { pathname: "/" } || props.location.state };
   
     if (registered === true) {
       return <Navigate to="./login" />;

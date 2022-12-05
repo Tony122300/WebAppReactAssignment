@@ -52,6 +52,8 @@ const App = () => {
         <Route path="/reviews/form" element={<AddMovieReviewPage/>} />
         <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
           <Route  exact path="/movies/favourites" element={<FavouriteMoviesPage />} />
+          {/*there is a error with the route when i do private route */}
+          {/* <PrivateRoute  exact path="/movies/favourites" element={<FavouriteMoviesPage />} /> */}
           <Route exact path="/movies/upcoming" element={<UpcomingMoviesPage/>} />
           <Route exact path="/movies/popular" element={<PopularMovies/>} />
           <Route exact path="/movies/socials" element={<movieDetailsPage/>} />

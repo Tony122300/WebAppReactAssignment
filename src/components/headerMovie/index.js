@@ -41,7 +41,7 @@ const MovieHeader = (props) => {
         <a href={`https://www.boxofficemojo.com/title/${movie.imdb_id}`}>
         <FacebookIcon color="primary" />
         </a>
-        <a href={`https://www.boxofficemojo.com/title/${movie.imdb_id}`}>
+        <a href={`https://twitter.com/title/${movie.imdb_id}`}>
         <TwitterIcon color="primary" />
         </a>
         <a href={`https://www.boxofficemojo.com/title/${movie.imdb_id}`}>
