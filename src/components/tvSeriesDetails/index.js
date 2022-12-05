@@ -8,10 +8,6 @@ import NavigationIcon from "@mui/icons-material/Navigation";
 import Fab from "@mui/material/Fab";
 import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
-import MovieReviews from "../movieReviews";
-import CakeIcon from '@mui/icons-material/Cake';
-import PlaceIcon from '@mui/icons-material/Place';
-// A Drawer component is either visible (open) or hidden. We control this with a boolean state variable - drawerOpen.
 
 const root = {
     display: "flex",
@@ -23,44 +19,57 @@ const root = {
 };
 const chip = { margin: 0.5 };
 
-const MovieActorDetails = ({ actors }) => {  // Don't miss this!
-  const [drawerOpen, setDrawerOpen] = useState(false);
+const TVSeriesDetails = ({ tvSeries }) => {  // Don't miss this!
+    const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
     <>
       <Typography variant="h5" component="h3">
-        <b>Biography of {actors.name}</b>
+        Overview
       </Typography>
 
       <Typography variant="h6" component="p">
-        {actors.biography}
+        {tvSeries.overview}
       </Typography>
 
       <Paper 
         component="ul" 
         sx={root}
       >
-        <li>
-         <Chip label={`${actors.popularity}`} />
-         </li>
-        <li>
+        {/* <li>
+          <Chip label="Genres" sx={chip} color="primary" />
+        </li>
+        {tvSeries.genres.map((g) => (
+          <li key={g.name}>
+            <Chip label={g.name} sx={chip} />
+          </li>
+        ))} */}
+      </Paper>
+      <Paper component="ul" sx={root}>
+        <Chip label={`${tvSeries.popularity} min.`} />
         <Chip
-        icon={<CakeIcon/>}
-         label={`${actors.birthday}`}/>
-</li>
-<li>
-         <Chip
-         icon={<PlaceIcon/>}
-         label={`${actors.place_of_birth}`}
+          icon={<AccessTimeIcon />}
+          label={`${tvSeries.first_air_date}`}
         />
-</li>
-<li>
-         <Chip
-         label={`${actors.known_for_department}`}
+        <Chip
+          icon={<StarRate />}
+          label={`${tvSeries.vote_count}`}
         />
-</li>
-        </Paper>
-
+        <Chip label={`Released: ${tvSeries.original_language}`} />
+      </Paper>
+      <Paper 
+        component="ul" 
+        sx={root}
+      >
+        <li>
+          <Chip label="origin Countries" sx={chip} color="primary" />
+        </li>
+        {tvSeries.origin_country.map((c) => (
+          <li key={c.name}>
+            <Chip label={c.name} sx={chip} />
+          </li>
+        ))}
+      </Paper>
       <Fab
         color="secondary"
         variant="extended"
@@ -75,9 +84,10 @@ const MovieActorDetails = ({ actors }) => {  // Don't miss this!
         Reviews
       </Fab>
       <Drawer anchor="top" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-        {/* <MovieReviews movie={movie} /> */}
+        {/* <MovieReviews tvSeries={tvSeries} /> */}
       </Drawer>
-      </>
+    </>
   );
 };
-export default MovieActorDetails ;
+
+export default  TVSeriesDetails ;

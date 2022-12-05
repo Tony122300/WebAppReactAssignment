@@ -15,7 +15,7 @@ import IconButton from "@mui/material/IconButton";
 import img from '../../images/film-poster-placeholder.png'
 import Avatar from '@mui/material/Avatar';
 import { ActorsContext } from "../../contexts/actorsContext";
-
+import WorkIcon from '@mui/icons-material/Work';
 
 export default function MovieActorCard({ actors, action }) {
   const { favourites, addToFavourites } = useContext(ActorsContext);
@@ -67,9 +67,13 @@ export default function MovieActorCard({ actors, action }) {
       <Grid container>
           <Grid item xs={6}>
           <Typography variant="h6" component="p">
-              <CalendarIcon fontSize="small" />
-              {actors.birthday}
+              <WorkIcon fontSize="small" />
+              {actors.known_for_department}
               </Typography>
+              <Typography variant="h6" component="p">
+              <StarRateIcon fontSize="small" />
+              {"  "} {actors.popularity}{" "}
+            </Typography>
               </Grid>
               </Grid>
               </CardContent>

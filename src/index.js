@@ -18,11 +18,15 @@ import TopMoviesPage from "./pages/topMoviesPage";
 import MovieActorsPage from "./pages/actorPage";
 import FavouriteActorsPage from "./pages/favouriteActorsPage";
 import MovieActorDetailsPage from "./pages/actorDetailsPage";
-// import LoginPage from "./pages/loginPage";
-// import AuthProvider from "./contexts/authContext";
-// import PrivateRoute from "./components/privateRoute/index";
-// import AuthHeader from "./components/authHeader/index";
-// import SignUpPage from "./pages/signUpPage";
+import LoginPage from "./pages/loginPage";
+import AuthProvider from "./contexts/authContext";
+import PrivateRoute from "./components/privateRoute/index";
+import AuthHeader from "./components/authHeader/index";
+import SignUpPage from "./pages/signUpPage";
+import TVSeriesPage from "./pages/tvSeriesPage";
+import TVSeriesDetailsPage from "./components/tvSeriesDetails";
+import TVSeriesContextProvider from "./contexts/tvSeriesContext";
+import { Switch } from "@mui/material";
 
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -38,13 +42,13 @@ const App = () => {
     return (
         <QueryClientProvider client={queryClient}>
         <BrowserRouter>
-         {/* <AuthProvider>
-          <AuthHeader />  */}
+         <AuthProvider>
+          <AuthHeader /> 
             <SiteHeader />
-            <MoviesContextProvider><ActorContextProvider>
-        <Routes>
-        {/* <Route path="/login" element={<LoginPage/>} />
-        <Route path="/signup" element={<SignUpPage/>} /> */}
+            <MoviesContextProvider><ActorContextProvider><TVSeriesContextProvider>
+            <Routes>
+        <Route path="/login" element={<LoginPage/>} />
+        <Route path="/signup" element={<SignUpPage/>} />
         <Route path="/reviews/form" element={<AddMovieReviewPage/>} />
         <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
           <Route  exact path="/movies/favourites" element={<FavouriteMoviesPage />} />
@@ -55,12 +59,15 @@ const App = () => {
           <Route  exact path="/actors/favourites" element={<FavouriteActorsPage />} />
           <Route path="/movies/:id" element={<MoviePage />} />
           <Route path="/actors/:id" element={<MovieActorDetailsPage />} />
+          <Route path="/tvSeries" element={<TVSeriesPage />} />
+          <Route path="/tvSeries/:id" element={<TVSeriesDetailsPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="*" element={ <Navigate to="/" /> } />
-        </Routes>
+          </Routes>
+        </TVSeriesContextProvider>
         </ActorContextProvider>
         </MoviesContextProvider>
-        {/* </AuthProvider> */}
+        </AuthProvider>
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
